@@ -15,7 +15,7 @@
 	<context-param>
 		<description>JDBC connection</description>
 		<param-name>the.db</param-name>
-		<param-value>jdbc:mysql://localhost/students?user=root</param-value>
+		<param-value>jdbc:mysql://localhost/yfm_products?user=root</param-value>
 	</context-param>
 	<servlet>
 		<servlet-name>Migration</servlet-name>

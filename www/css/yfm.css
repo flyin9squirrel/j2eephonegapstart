@@ -1,0 +1,14 @@
+form[target=paypal] tr:first-child {
+	display:none;	
+}
+
+#splash {
+	background-image:url(../img/flickr_splashscreen.png);
+	background-repeat:no-repeat;
+	width:320px;
+	height:480px;
+}
+
+.black {
+	color:black;
+}

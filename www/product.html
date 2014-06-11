@@ -13,10 +13,40 @@
 
 </head>
 <body>
-	<div class="container text-right" id="splash">
-		
-		<a href="product.html"><button type="button" class="btn btn-primary">Products</button></a>
-		<a href="about.html"><button type="button" class="btn btn-primary">About</button></a>
+	<div class="container">
+		<ul class="nav nav-pills">
+			<li><a href="index.html">Home</a></li>
+			<li class="active"><a href="product.html">Products</a></li>
+			<li><a href="about.html">About</a></li>
+		</ul>
+
+		<div>
+			<h1>Your Farm Market</h1>
+			<p class="lead">Fresh vegetables straight from the farm to your
+				table!</p>
+			<p class="small black">Select your items and click 'Add to Cart'.
+				Checkout is handled through PayPal and your order will be packed and
+				ready for pick up at our YFM location at 1147 Dundas St. E. in the
+				Home Building Centre parking lot.</p>
+		</div>
+
+		<div id="productList">
+			<script id="productTemplate" type="text/template">
+		<div class="table-responsive">
+			<table>
+				<tr><th scope="col"><%= item_name %></th><th scope="col">&nbsp;</th></tr>
+				<tr>
+					<td><img src="<%= product_image %>"
+						class="img-responsive"
+						alt="<%= alt_tag %>"></td>
+					<td>From <%= farm_name %><br>
+						<div id="product<%= id %>"></div></td>
+				</tr>
+			</table>
+		</div>		
+		</script>
+
+		</div>
 	</div>
 	<!-- /.container -->
 
@@ -33,6 +63,7 @@
 	<!-- backbone is a router that respects the back button -->
 	<script
 		src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
+		<script src="phonegap.js"></script>
 	<!-- this is our javascript -->
 	<script src="js/products.js"></script>
 </body>

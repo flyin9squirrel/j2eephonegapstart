@@ -7,11 +7,16 @@ import com.googlecode.flyway.core.Flyway;
 
 public class Migration extends HttpServlet {
 	/**
-	 * The idea here is that our servlet is restarted when we push, so the migrations will be run
+	 * The idea here is that our servlet is restarted when we push, so the
+	 * migrations will be run
 	 */
 	private static final long serialVersionUID = 1L;
+
 	public void init() throws ServletException {
-		String sUrl = getServletContext().getInitParameter("the.db");
+		String sUrl = OpenShiftDataSource
+				.getConnectionString(getServletContext().getInitParameter(
+						"the.db"));
+		System.out.println("Data Source: " + sUrl);
 		Flyway flyway = new Flyway();
 		flyway.setDataSource(sUrl, null, null);
 		flyway.migrate();
