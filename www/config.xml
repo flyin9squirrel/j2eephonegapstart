@@ -4,10 +4,10 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0"
 	id="com.phonegap.hello-world" version="1.0.0">
 
-	<name>Hello World</name>
+	<name>YFM - Your Farm Market</name>
 
 	<description>
-		Hello World sample application that responds to the deviceready event.
+		Buy produce online and pick it up at the YFM in Woodstock, ON.   
 	</description>
 
 	<author href="http://phonegap.com" email="support@phonegap.com">

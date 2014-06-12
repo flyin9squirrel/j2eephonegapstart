@@ -9,6 +9,11 @@ form[target=paypal] tr:first-child {
 	height:480px;
 }
 
+td { 
+    overflow-y: hidden; 
+    overflow-x: hidden; 
+}
+
 .black {
 	color:black;
 }

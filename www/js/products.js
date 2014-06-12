@@ -1,5 +1,7 @@
+var app = null;
+
 jQuery("document").ready(function() {
-	new ProductRouter();
+	app = new ProductRouter();
 });
 
 var ProductRouter = Backbone.Router.extend({
@@ -16,14 +18,14 @@ var ProductRouter = Backbone.Router.extend({
 		}
 	},
 	
-	sUrlprefix:"",
+	sUrlprefix:"http://prog1520-anorris.rhcloud.com/",
 	onDeviceReady:function() {
-		this.sUrlprefix = "http://prog1520-anorris.rhcloud.com/";
-		this.getProducts();
+		app.sUrlprefix = "http://prog1520-anorris.rhcloud.com/";
+/*		app.getProducts(); */
 	},
 	
 	initialize : function() {	
-		document.addEventListener('deviceready', jQuery.proxy(this.onDeviceReady,this), false);	
+		document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);	
 		this.getProducts();
 	},
 	
