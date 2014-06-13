@@ -3,10 +3,10 @@ form[target=paypal] tr:first-child {
 }
 
 #splash {
-	background-image:url(../img/flickr_splashscreen.png);
+	background-image:url(../img/flickr_splashscreen-copy.png);
 	background-repeat:no-repeat;
-	width:320px;
-	height:480px;
+	width:800px;
+	height:1200px;
 }
 
 td { 

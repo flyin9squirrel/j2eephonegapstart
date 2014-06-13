@@ -2,7 +2,17 @@ var app = null;
 
 jQuery("document").ready(function() {
 	app = new ProductRouter();
+	
 });
+
+//var httpReq = new XMLHttpRequest();
+//httpReq.setRequestHeader("Access-Control-Allow-Origin", "*");
+//httpReq.setRequestHeader('Content-type', 'application/ecmascript');
+//    httpReq.setRequestHeader('Access-Control-Allow-Origin', '*');
+//    console.log('ok');
+// var url = "http://prog1520-anorris.rhcloud.com/";
+// var xhr = createCORSRequest('GET', url);
+// xhr.send();
 
 var ProductRouter = Backbone.Router.extend({
 	fTemplateList : _.template(jQuery("#productTemplate").html()),
@@ -21,7 +31,7 @@ var ProductRouter = Backbone.Router.extend({
 	sUrlprefix:"http://prog1520-anorris.rhcloud.com/",
 	onDeviceReady:function() {
 		app.sUrlprefix = "http://prog1520-anorris.rhcloud.com/";
-/*		app.getProducts(); */
+		app.getProducts(); 
 	},
 	
 	initialize : function() {	
@@ -35,5 +45,5 @@ var ProductRouter = Backbone.Router.extend({
 		.fail(function(err){
 			console.log(err);
 		});
-	}
+	},
 });
